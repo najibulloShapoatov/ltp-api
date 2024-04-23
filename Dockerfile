@@ -7,7 +7,7 @@ COPY . .
 
 RUN go mod download
 
-RUN set -x; apk add --no-cache && CGO_ENABLED=0 go build -ldflags="-s -w" -o ./bin/app cmd/main.go
+RUN set -x; apk add --no-cache && go build -o ./bin/app cmd/main.go
 
 
 #Run stage
