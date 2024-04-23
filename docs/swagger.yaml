@@ -1,0 +1,58 @@
+basePath: /api/v1
+definitions:
+  dto.LTP:
+    properties:
+      amount:
+        type: string
+      pair:
+        type: string
+    type: object
+  dto.LTPResponse:
+    properties:
+      ltp:
+        items:
+          $ref: '#/definitions/dto.LTP'
+        type: array
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: LTP API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: LTP API
+  version: "1.0"
+paths:
+  /ltp:
+    get:
+      consumes:
+      - application/json
+      description: ltp
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.LTPResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: ltp
+      tags:
+      - LTPHandler
+securityDefinitions:
+  Authorization:
+    in: header
+    name: Authorization
+    type: apiKey
+  X-API-Key:
+    in: header
+    name: X-API-Key
+    type: apiKey
+swagger: "2.0"
