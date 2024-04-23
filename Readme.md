@@ -30,10 +30,12 @@ After create docker-compose.yml
 version: "3.9"
 
 services:
-  lpt:
-    image: ltp-api:latest
+  ltp:
+    container_name: ltp-service
+    build:
+      context: .
     ports:
-      - "81:84"
+      - "84:84"
     volumes:
       - ./config.yaml:/etc/config.yaml
     restart: unless-stopped
