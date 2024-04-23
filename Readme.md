@@ -54,6 +54,8 @@ After you get log like
 
 After you can open http://localhost:84/docs/index.html#/LTPHandler/get_ltp and check the API
 
+After executing  request you get 
+![img.png](img.png)
 
 
 Project uses modular monolith architecture.
