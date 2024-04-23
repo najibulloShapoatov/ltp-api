@@ -40,6 +40,17 @@ services:
       - ./config.yaml:/etc/config.yaml
     restart: unless-stopped
 ```
+After run 
+```shell
+docker-compose up -d
+```
+After you get log like
+```shell
+[+] Running 2/2
+ ✔ Network ltp-api_default  Created                                                                                                                                                                                            0.0s 
+ ✔ Container ltp-service    Started      
+```
+
 
 After you can open http://localhost:84/docs/index.html#/LTPHandler/get_ltp and check the API
 
